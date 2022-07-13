@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/presentacion",
+      "handler": "presentacion.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/presentacion",
+      "handler": "presentacion.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/presentacion",
+      "handler": "presentacion.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

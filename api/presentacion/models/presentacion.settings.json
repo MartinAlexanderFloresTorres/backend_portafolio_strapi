@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "presentacions",
+  "info": {
+    "name": "presentacion",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "cargo": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

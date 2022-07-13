@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "proyectos",
+  "info": {
+    "name": "proyectos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "resumen_uno": {
+      "type": "richtext",
+      "required": true
+    },
+    "resumen_negrita": {
+      "type": "richtext",
+      "required": true
+    },
+    "resumen_dos": {
+      "type": "richtext",
+      "required": true
+    },
+    "imagen_previa": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "imagenes": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "tecnologias": {
+      "type": "json",
+      "required": true
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "titulo",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "fecha_creacion": {
+      "type": "date",
+      "required": true
+    },
+    "repositorio": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
